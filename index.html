@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>My AI Literacy Learning Progress | Pre-test and Post-test</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#162536;background:#f3f7fa;line-height:1.55;--navy:#123b54;--blue:#2179a5;--teal:#11816c;--line:#dce5ec;--ink:#162536;--muted:#526676;--focus:#ad3b11}
+*{box-sizing:border-box}body{margin:0} .shell{max-width:900px;margin:0 auto;padding:24px 18px 42px}
+header{background:#123b54;color:white;padding:28px 32px;border-radius:18px 18px 0 0} .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#c0f0e8;margin:0 0 5px}h1{font-size:clamp(1.45rem,3vw,2.2rem);line-height:1.2;margin:0 0 9px}header p{margin:0;color:#e0ecf2;max-width:60ch}
+main{background:white;border:1px solid var(--line);border-top:0;padding:28px 32px;border-radius:0 0 18px 18px;box-shadow:0 14px 30px rgba(18,59,84,.06)}h2{font-size:1.2rem;margin:0 0 10px;color:var(--navy)}p{margin:8px 0 15px}.intro{color:var(--muted)}.steps{margin:0 0 22px;padding-left:22px}.steps li{padding:2px 0}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.field{border:1px solid var(--line);background:#f8fbfd;padding:18px;border-radius:12px}.field label{display:block;font-weight:750;margin-bottom:8px}.input-line{display:flex;align-items:center;gap:10px}.field input{font:700 1.5rem system-ui;width:100px;max-width:100%;padding:10px;border:2px solid #98abb8;border-radius:8px;background:#fff;color:var(--ink)}.field input:focus-visible,button:focus-visible{outline:3px solid #d46b38;outline-offset:3px}.denominator{font-size:1.1rem;color:var(--muted);font-weight:650}.hint{color:var(--muted);font-size:.87rem;display:block;margin-top:7px}.error{color:#9d2b21;font-size:.92rem;font-weight:650;min-height:24px;margin:6px 0}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:4px 0 25px}button{border:0;background:#123b54;color:#fff;border-radius:9px;padding:10px 16px;font-weight:700;font-size:1rem;cursor:pointer}button:hover{background:#1c526f}button.secondary{background:#eff5f7;color:#1b4459;border:1px solid #b9cdd8}button.secondary:hover{background:#e3eef3}button:disabled{opacity:.5;cursor:not-allowed}.separator{border:0;border-top:1px solid var(--line);margin:24px 0}
+#results[hidden]{display:none} .summary{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:12px;margin:16px 0}.metric{border:1px solid var(--line);border-radius:12px;padding:14px;background:#f8fbfd}.metric small{font-size:.85rem;color:var(--muted);display:block}.metric strong{font-size:clamp(1.4rem,3.4vw,2rem);color:var(--navy);line-height:1.25;display:block;margin:6px 0}.metric.delta{background:#f1faf6;border-color:#cbe9dd}.metric.delta strong{color:#09664f}.metric.delta.negative{background:#fdf3f1;border-color:#f0d1ca}.metric.delta.negative strong{color:#9d2b21}
+.chart{border:1px solid var(--line);border-radius:12px;padding:20px 20px 16px;margin:14px 0 18px} .chart-title{margin:0 0 15px;font-size:1.03rem;color:var(--navy);font-weight:750}.chart-row{display:grid;grid-template-columns:105px 1fr 76px;align-items:center;gap:10px;margin:16px 0}.chart-label{font-weight:700}.track{height:34px;border-radius:6px;background:repeating-linear-gradient(to right,#eff3f6 0,#eff3f6 calc(20% - 1px),#ccd8e0 20%);overflow:hidden}.bar{height:100%;transition:width .4s ease;width:0%;min-width:0}.bar.pre{background:#2478a4}.bar.post{background:#0b806b}.chart-score{font-weight:750;text-align:right;font-variant-numeric:tabular-nums}.axis{display:flex;justify-content:space-between;margin-left:115px;margin-right:77px;font-size:.77rem;color:var(--muted)}.legend{font-size:.85rem;color:var(--muted);margin:12px 0 0}
+.feedback{background:#f5f9fb;border-left:4px solid var(--teal);padding:14px 17px;border-radius:0 10px 10px 0}.feedback p{margin:4px 0 6px}.note{font-size:.89rem;color:var(--muted)}footer{font-size:.86rem;color:var(--muted);margin:20px 5px 0} footer strong{color:var(--ink)} .noscript{background:#fff3df;border:1px solid #e9c78b;padding:14px;margin:15px 0;border-radius:8px}
+@media(max-width:620px){.shell{padding:0}header{border-radius:0;padding:25px 19px}main{border-radius:0;padding:22px 18px}.inputs{grid-template-columns:1fr;gap:10px}.summary{grid-template-columns:1fr 1fr}.metric.delta{grid-column:1/-1}.chart{padding:14px}.chart-row{grid-template-columns:78px 1fr 58px;gap:6px}.chart-label{font-size:.84rem}.axis{margin-left:84px;margin-right:62px}}
+@media(prefers-reduced-motion:reduce){.bar{transition:none}}
+@media print{body{background:#fff}.shell{max-width:100%;padding:0}header{border-radius:0}main{border:0;box-shadow:none}.actions{display:none}.bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}.feedback{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><p class="eyebrow">Developing AI Literacy · Learner feedback</p><h1>My AI Literacy Learning Progress</h1><p>Compare your diagnostic assessment and post-test scores to see how your understanding has changed.</p></header>
+<main>
+<section aria-labelledby="instructions-title"><h2 id="instructions-title">Enter your scores</h2><p class="intro">Open <strong>Grades</strong> in Canvas to find your two assessment scores. Both tests are marked out of 15. Enter your own marks below, then select <strong>Show my progress</strong>.</p><ol class="steps"><li>Find your <strong>AI Literacy Diagnostic Assessment</strong> mark.</li><li>Find your <strong>AI Literacy Post-Test</strong> mark.</li><li>Enter each mark as a whole number from 0 to 15.</li></ol></section>
+<form id="score-form" novalidate>
+<div class="inputs"><div class="field"><label for="pre-score">Diagnostic (pre-test)</label><div class="input-line"><input id="pre-score" name="pre" type="number" min="0" max="15" step="1" value="" inputmode="numeric" required aria-describedby="pre-hint"><span class="denominator">/ 15</span></div><span class="hint" id="pre-hint">Your score before completing the units.</span></div><div class="field"><label for="post-score">Post-test</label><div class="input-line"><input id="post-score" name="post" type="number" min="0" max="15" step="1" value="" inputmode="numeric" required aria-describedby="post-hint"><span class="denominator">/ 15</span></div><span class="hint" id="post-hint">Your score after completing the units.</span></div></div>
+<p class="error" id="error" role="alert" aria-live="assertive"></p><div class="actions"><button type="submit">Show my progress</button><button class="secondary" type="button" id="clear-btn">Clear scores</button><button class="secondary" type="button" id="print-btn" hidden>Print or save my result</button></div></form>
+<section id="results" aria-labelledby="results-title" hidden><hr class="separator"><h2 id="results-title">Your results</h2><div class="summary"><div class="metric"><small>Pre-test</small><strong id="pre-percent">—</strong><span id="pre-raw">—</span></div><div class="metric"><small>Post-test</small><strong id="post-percent">—</strong><span id="post-raw">—</span></div><div class="metric delta" id="delta-card"><small>Change</small><strong id="delta-percent">—</strong><span id="delta-marks">—</span></div></div>
+<div class="chart" role="img" id="chart-description" aria-label="Pre-test and post-test score comparison"><p class="chart-title">Score comparison</p><div class="chart-row"><span class="chart-label">Pre-test</span><div class="track"><div class="bar pre" id="pre-bar"></div></div><span class="chart-score" id="pre-chart-label">—</span></div><div class="chart-row"><span class="chart-label">Post-test</span><div class="track"><div class="bar post" id="post-bar"></div></div><span class="chart-score" id="post-chart-label">—</span></div><div class="axis" aria-hidden="true"><span>0%</span><span>20%</span><span>40%</span><span>60%</span><span>80%</span><span>100%</span></div><p class="legend">Blue = diagnostic assessment. Green = post-test. Each bar represents a score out of 15.</p></div>
+<div class="feedback" aria-live="polite" aria-atomic="true"><strong id="feedback-heading">Your learning progress</strong><p id="feedback-text"></p><p id="next-step"></p></div><p class="note"><strong>How change is calculated:</strong> Post-test percentage minus pre-test percentage. The result is measured in <strong>percentage points</strong>, not percentage growth. For example, 60% to 80% is an increase of 20 percentage points.</p></section>
+<hr class="separator"><section aria-labelledby="privacy-heading"><h2 id="privacy-heading">Privacy and interpretation</h2><p class="note">This calculator runs entirely in your browser. It does not collect, send, save or retrieve your scores. Your entries are not submitted to Canvas. If you print or save the page, take care when sharing personal learning information.</p><p class="note">The programme's evaluation objective is to investigate <strong>mean change of 15 percentage points across matched learners</strong>, where appropriate baseline data are available. That is a <strong>group evaluation target</strong>, not a required result for an individual learner. The calculator is for personal reflection and does not affect grades.</p></section>
+</main><footer><strong>AI Literacy and Responsible Use of Generative AI</strong> · Self-guided learner progress tool · Developed for the 906.710 Special Topic eLearning project.</footer>
+</div>
+<noscript><p class="noscript">JavaScript is required to display the comparison. You can still view your individual scores on the Canvas Grades page.</p></noscript>
+<script>
+(function(){'use strict';
+const total=15;
+const $=id=>document.getElementById(id);
+const form=$('score-form'),pre=$('pre-score'),post=$('post-score'),error=$('error'),results=$('results');
+const format=n=>n.toFixed(1)+'%';
+const signed=n=>(n>0?'+':'')+n.toFixed(1);
+const reset=()=>{pre.value='';post.value='';error.textContent='';results.hidden=true;$('print-btn').hidden=true;pre.focus();};
+function validScore(input){const v=input.value.trim();if(v==='')return null;const n=Number(v);return Number.isInteger(n)&&n>=0&&n<=total?n:null;}
+function show(){error.textContent='';const a=validScore(pre),b=validScore(post);
+if(a===null||b===null){error.textContent='Enter a whole-number score from 0 to 15 for each assessment.';(a===null?pre:post).focus();results.hidden=true;$('print-btn').hidden=true;return;}
+const pctA=a/total*100,pctB=b/total*100,diff=pctB-pctA,markDiff=b-a;
+$('pre-percent').textContent=format(pctA);$('post-percent').textContent=format(pctB);$('pre-raw').textContent=a+' of '+total+' correct';$('post-raw').textContent=b+' of '+total+' correct';
+$('delta-percent').textContent=signed(diff)+' pp';$('delta-marks').textContent=(markDiff>0?'+':'')+markDiff+' correct answers';
+$('pre-bar').style.width=pctA+'%';$('post-bar').style.width=pctB+'%';$('pre-chart-label').textContent=format(pctA);$('post-chart-label').textContent=format(pctB);
+$('chart-description').setAttribute('aria-label','Pre-test: '+format(pctA)+' ('+a+' out of 15). Post-test: '+format(pctB)+' ('+b+' out of 15). Change: '+signed(diff)+' percentage points.');
+$('delta-card').classList.toggle('negative',diff<0);
+let heading='',msg='',next='';
+if(diff>0){heading='Your score improved';msg='Your score increased by '+diff.toFixed(1)+' percentage points, from '+format(pctA)+' to '+format(pctB)+'. You answered '+markDiff+' more '+(markDiff===1?'question':'questions')+' correctly.';next='Review the feedback from your post-test. Identify one topic you would like to practise further.';}
+else if(diff<0){heading='Your result shows an area to revisit';msg='Your post-test score is '+Math.abs(diff).toFixed(1)+' percentage points lower than your pre-test score. One pair of tests cannot explain why the change occurred.';next='Review your quiz feedback and revisit any concepts that remain unclear. Ask your educator if you need support.';}
+else{heading='Your score stayed the same';msg='You scored '+format(pctA)+' on both tests. A similar score does not mean you learned nothing.';next='Look at which questions you answered correctly or incorrectly and identify one area for further practice.';}
+$('feedback-heading').textContent=heading;$('feedback-text').textContent=msg;$('next-step').textContent=next;
+results.hidden=false;$('print-btn').hidden=false;
+}
+form.addEventListener('submit',e=>{e.preventDefault();show();});
+$('clear-btn').addEventListener('click',reset);
+$('print-btn').addEventListener('click',()=>window.print());
+[pre,post].forEach(x=>x.addEventListener('input',()=>{if(error.textContent)error.textContent='';}));
+})();
+</script>
+</body>
+</html>
